@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local environment
+.venv/
+venv/
+.env
+
+# Reports and runtime output
+pc_report.txt
+apoliak_vitals_report_*.txt
+*.log
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini

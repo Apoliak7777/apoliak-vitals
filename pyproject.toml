@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apoliak-vitals"
+version = "2.1.0"
+description = "A read-only Windows PC analyzer and first module of Apoliak Optimizer."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Apoliak" }]
+keywords = [
+    "windows",
+    "pc-analyzer",
+    "system-information",
+    "health-score",
+    "performance",
+    "read-only",
+    "desktop-tool",
+]
+dependencies = [
+    "psutil>=5.9.8,<8.0",
+    "customtkinter>=5.2.2,<6.0",
+]
+
+[project.scripts]
+apoliak-vitals = "main:main"
+
+[project.gui-scripts]
+apoliak-vitals-gui = "gui:main"
+
+[tool.setuptools]
+py-modules = ["main", "gui"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
