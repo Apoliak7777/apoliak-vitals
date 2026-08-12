@@ -1,4 +1,26 @@
-# Apoliak Vitals
+<div align="center">
+
+[![English](https://img.shields.io/badge/EN-English-2ea043?style=for-the-badge)](README.md) [![Slovencina](https://img.shields.io/badge/SK-Sloven%C4%8Dina-30363d?style=for-the-badge)](README.sk.md)
+
+</div>
+
+<div align="center">
+
+# 🩺 Apoliak Vitals
+
+**A read-only Windows PC health analyzer: reads the vital signs of your machine, turns them into a transparent 0–100 score, and changes absolutely nothing.**
+
+![Version](https://img.shields.io/badge/version-2.1.0-1478E0?style=for-the-badge)
+![Tests](https://img.shields.io/badge/tests-957%20passing-16A916?style=for-the-badge)
+![Read only](https://img.shields.io/badge/mode-read%20only-2ea043?style=for-the-badge)
+![No admin](https://img.shields.io/badge/admin%20rights-never-E60012?style=for-the-badge)
+![Single file](https://img.shields.io/badge/single%20file-11%20MB-9B6BE0?style=for-the-badge)
+
+[**Download Apoliak-Vitals.exe**](https://github.com/Apoliak7777/apoliak-vitals/releases/latest) · [Slovenský návod](START_HERE_SK.md) · [Security policy](SECURITY.md)
+
+</div>
+
+---
 
 Apoliak Vitals is a lightweight Windows PC analysis tool. It reads the state of the
 machine — Windows edition and firmware, CPU, RAM and page file, drives and their wear, the
@@ -144,7 +166,7 @@ Two more rules hold everywhere in the code:
   measurement instead of one on/off threshold
 - Per-area sub-scores for **CPU, Memory, Storage, Maintenance, Power and Security**
 - Every deduction states the number it was based on, and a measurement that was cut short
-  is quoted as a lower bound ("at least 4.0 GB" / "aspoň 12,0 GB"), never as an exact
+  is quoted as a lower bound ("at least 12.0 GB" / "aspoň 12.0 GB"), never as an exact
   figure. The qualifier is a translated sentence, not text baked into the number
 - A category nobody could measure is reported as unavailable, not as a clean 100
 - One definition of "complete data", shared by the score, the report and the advice
@@ -690,7 +712,7 @@ report before sharing it. Details are in [SECURITY.md](SECURITY.md).
 
 ## Tests
 
-The suite uses only Python's standard-library runner. **948 tests** across sixteen modules,
+The suite uses only Python's standard-library runner. **957 tests** across seventeen modules,
 of which 2 skip themselves when the account may not create symbolic links — the default on
 Windows outside Developer Mode:
 
@@ -707,8 +729,8 @@ Windows outside Developer Mode:
 | `test_recommendations.py` | 70 |
 | `test_i18n.py` | 62 |
 | `test_win_storage.py` | 59 |
+| `test_win_security.py` | 59 |
 | `test_folder_usage.py` | 55 |
-| `test_win_security.py` | 55 |
 | `test_report.py` | 47 |
 | `test_gui.py` | 38 |
 | `test_win_battery.py` | 37 |
@@ -716,6 +738,7 @@ Windows outside Developer Mode:
 | `test_history.py` | 29 |
 | `test_models.py` | 27 |
 | `test_readonly.py` | 12 |
+| `test_version.py` | 5 |
 
 Collectors take an optional `psutil_module` argument or an injectable reader, and the
 renderers take an optional translator, so the tests pass fakes instead of touching the real
@@ -764,7 +787,7 @@ Apoliak-Vitals/
 │   ├── exporters.py         # text / JSON / HTML / Markdown
 │   ├── history.py           # opt-in local JSON Lines history
 │   └── utils.py             # formatting, redaction, and the defensive folder walker
-├── tests/                   # 948 unit tests in sixteen modules plus shared fakes in helpers.py
+├── tests/                   # 957 unit tests in seventeen modules plus shared fakes in helpers.py
 ├── docs/
 │   ├── architecture.md      # module map, threading, failure behaviour
 │   └── roadmap.md           # what is done and what comes next
@@ -773,7 +796,7 @@ Apoliak-Vitals/
 ├── main.py                  # console entry point
 ├── gui.py                   # graphical entry point
 ├── build_exe.bat            # the only script: venv, dependencies, tests, single-file build
-├── Apoliak_Vitals.spec # PyInstaller spec for that one executable
+├── Apoliak_Vitals.spec      # PyInstaller spec for that one executable
 ├── app.ico                  # application icon, also shown on the window and taskbar
 ├── app.manifest             # asInvoker, DPI aware, long-path aware
 ├── version_info.txt         # Windows file-version resource

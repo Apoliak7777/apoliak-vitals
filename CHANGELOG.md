@@ -89,7 +89,7 @@ points at the page where something can be done about it.
   that `open_setting` is the only function in `gui.py` that can reach `os.startfile`.
 - New test modules `test_win_security.py`, `test_win_storage.py`, `test_win_battery.py`,
   `test_folder_usage.py`, `test_models.py` and `test_readonly.py`. The suite grew from 548
-  tests in ten modules to **948 in sixteen**, still on the standard-library runner. Each new
+  tests in ten modules to **957 in seventeen**, still on the standard-library runner. Each new
   collector is asserted to return a safe empty value with `platform.system()` monkeypatched
   to `"Linux"`.
 

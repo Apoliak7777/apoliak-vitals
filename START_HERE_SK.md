@@ -220,7 +220,7 @@ diskov, najväčšie priečinky) nemajú vlastný prepínač — v konzole sa ro
 ## Keď zmeníš kód a chceš nové EXE
 
 Dvakrát klikni na `build_exe.bat`. Je to jediný skript v projekte — pripraví si prostredie,
-spustí všetkých 948 testov a až potom postaví nový `dist\Apoliak-Vitals.exe`. Ak
+spustí všetkých 957 testov a až potom postaví nový `dist\Apoliak-Vitals.exe`. Ak
 niektorý test neprejde, build sa zastaví.
 
 Podrobný technický popis je v `README.md`, presné znenie sľubu o čítaní v `SECURITY.md`.

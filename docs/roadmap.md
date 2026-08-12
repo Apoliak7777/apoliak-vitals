@@ -143,7 +143,7 @@ insufficient, so `tests/test_readonly.py` now proves it:
 - an `ast` pass asserts `open_setting` is the only function in `gui.py` that can reach
   `os.startfile`, and the fence itself is tested against 7 accepted and 26 refused values.
 
-The test suite grew to **948 tests across sixteen modules**, up from 548 across ten.
+The test suite grew to **957 tests across seventeen modules**, up from 548 across ten.
 
 ## Proposed v2.2
 

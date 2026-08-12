@@ -263,7 +263,7 @@ A fifth check collects the `action_uri` values the advice produced and asserts t
 from `RECOMMENDATION_ACTIONS` **and that following one never happened**: `os.startfile` is in
 the watched event set, so a single unattended launch would have appeared in the findings.
 
-`tests/test_readonly.py` contributes 12 of the suite's 948 tests. The rest of the fence —
+`tests/test_readonly.py` contributes 12 of the suite's 957 tests. The rest of the fence —
 `is_settings_uri` against 7 accepted and 26 refused values, and `open_setting` against a
 refused URI, a failing opener, a machine with no opener, and the no-elevation signature — is
 tested there too, without a display and without ever launching anything.
